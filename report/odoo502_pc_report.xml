@@ -1,0 +1,30 @@
+<odoo>
+    <record id="odoo502.pc_report" model="ir.actions.report">
+        <field name="name"> Informe de ordenadores</field>
+        <field name="model">odoo502.pc</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">odoo502.pc_report_view</field>
+        <field name="report_file">odoo502.pc_report</field>
+        <field name="binding_model_id" ref="model_odoo502_pc"/>
+        <field name="binding_type">report</field>
+
+    </record>
+
+    <template id="pc_report_view">
+        <t t-call="web.html_container">
+            <!-- muestra datos de la empresa (salta página) -->
+            <t t-call="web.external_layout">
+                <h1>ordenadores </h1><br />
+                <t t-foreach="docs" t-as="pc">
+                    <ul>
+                        <li>    id <span t-field="pc.name" /></li>
+                        <li>    nombre <span t-field="pc.nombre" /></li>
+                        <li>    sistema <span t-field="pc.sistema" /></li>
+
+                    </ul>
+                </t>
+            </t>
+        </t>
+    </template>
+
+</odoo>

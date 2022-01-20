@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_odoo502_pc_usuario,odoo502.pc.usuario,model_odoo502_pc,odoo502.group_odoo502_usuario,1,0,0,0
+access_odoo502_pc_administrador,odoo502.pc.administrador,model_odoo502_pc,odoo502.group_odoo502_administrador,1,1,1,1_

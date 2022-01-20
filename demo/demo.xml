@@ -1,0 +1,54 @@
+<odoo>
+    <data>
+        <!-- Demo pc -->
+          <record id="object0" model="odoo502.pc">
+            <field name="name">1</field>
+            <field name="nombre">MSI</field>
+            <field name="sistema">Windows</field>
+          </record>
+
+         <record id="object1" model="odoo502.pc">
+            <field name="name">2</field>
+            <field name="nombre">Asus</field>
+            <field name="sistema">Linux</field>
+          </record>
+
+        <record id="object2" model="odoo502.pc">
+            <field name="name">3</field>
+            <field name="nombre">Mac</field>
+            <field name="sistema">Mac</field>
+          </record>
+
+        <!-- Demo piezas -->
+        <record id="object3" model="odoo502.piezas">
+            <field name="name">pieza_1</field>
+            <field name="nombre">Tarjeta Grafica</field>
+        </record>
+
+        <record id="object4" model="odoo502.piezas">
+            <field name="name">pieza_2</field>
+            <field name="nombre">Placa base</field>
+        </record>
+
+        <record id="object5" model="odoo502.piezas">
+            <field name="name">pieza_3</field>
+            <field name="nombre">Disco duro</field>
+        </record>
+
+        <!-- Demo accesorios -->
+        <record id="object6" model="odoo502.accesorios">
+            <field name="name">accesorio_1</field>
+            <field name="nombre">Mouse</field>
+        </record>
+
+        <record id="object7" model="odoo502.accesorios">
+            <field name="name">accesorio_2</field>
+            <field name="nombre">Monitor Asus</field>
+        </record>
+
+        <record id="object8" model="odoo502.accesorios">
+            <field name="name">accesorio_3</field>
+            <field name="nombre">Teclado con Leds</field>
+        </record>
+    </data> 
+</odoo>

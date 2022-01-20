@@ -1,0 +1,29 @@
+<odoo>
+    <record id="odoo502.piezas_report" model="ir.actions.report">
+        <field name="name"> Informe de piezas</field>
+        <field name="model">odoo502.piezas</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">odoo502.piezas_report_view</field>
+        <field name="report_file">odoo502.piezas_report</field>
+        <field name="binding_model_id" ref="model_odoo502_piezas"/>
+        <field name="binding_type">report</field>
+
+    </record>
+
+    <template id="piezas_report_view">
+        <t t-call="web.html_container">
+            <!-- muestra datos de la empresa (salta página) -->
+            <t t-call="web.external_layout">
+                <h1>piezas </h1><br />
+                <t t-foreach="docs" t-as="piezas">
+                    <ul>
+                        <li>    id <span t-field="piezas.name" /></li>
+                        <li>    nombre <span t-field="piezas.nombre" /></li>
+
+                    </ul>
+                </t>
+            </t>
+        </t>
+    </template>
+
+</odoo>

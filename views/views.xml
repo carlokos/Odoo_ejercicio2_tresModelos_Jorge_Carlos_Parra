@@ -1,0 +1,222 @@
+<odoo>
+  <data>
+    
+    <!-- Vistas de pc-->
+
+    <record model="ir.ui.view" id="odoo502.pc_list_view">
+      <field name="name">odoo502.pc.view.tree</field>
+      <field name="model">odoo502.pc</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="nombre"/>
+          <field name="sistema"/>
+        </tree>
+      </field>
+    </record>
+
+<!-- search -->
+
+    <record model="ir.ui.view" id="odoo502.pc_search_view">
+      <field name="name">odoo502.pc.view.search</field>
+      <field name="model">odoo502.pc</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="name"/>
+          <field name="nombre"/>
+          <field name="sistema"/>
+          <group>
+            <filter name="group_by_nombre" string="nombre" context="{'gropup_by':'nombre'}" />
+          </group>
+        </search>
+      </field>
+    </record>
+
+    
+    <!-- form -->
+    
+    <record model="ir.ui.view" id="odoo502.pc_form_view">
+      <field name="name">odoo502.pc.view.form</field>
+      <field name="model">odoo502.pc</field>
+      <field name="arch" type="xml">
+        <form string="Información pc">
+          <sheet>
+            <div class="oe_title">
+              <h1>
+                ID <field name="name" placeholder="id"/>
+              </h1>
+            </div>
+            <group>
+              <group>
+                <separator string="Datos"/>
+                <field name="nombre" placeholder="nombre"/>
+                <field name="sistema"/>
+              </group>
+            </group>
+          </sheet>
+        </form>
+      </field>
+
+    </record>
+
+
+    <!-- Definición de menús-->
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="odoo502.pc_action_window">
+      <field name="name">Ordenador</field>
+      <field name="res_model">odoo502.pc</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="odoo502" id="odoo502.menu_root"/>
+    <menuitem name="Ordenadores" id="odoo502.menu_pc" parent="odoo502.menu_root"/>
+    <menuitem name="List" id="odoo502.menu_pc_list" parent="odoo502.menu_pc"
+              action="odoo502.pc_action_window"/>
+
+    <!-- Modelo 2 -->
+    <!-- Vistas de piezas-->
+
+    <record model="ir.ui.view" id="odoo502.piezas_list_view">
+      <field name="name">odoo502.piezas.view.tree</field>
+      <field name="model">odoo502.piezas</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="nombre"/>
+        </tree>
+      </field>
+    </record>
+
+<!-- search -->
+
+    <record model="ir.ui.view" id="odoo502.piezas_search_view">
+      <field name="name">odoo502.piezas.view.search</field>
+      <field name="model">odoo502.piezas</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="name"/>
+          <field name="nombre"/>
+          <group>
+            <filter name="group_by_nombre" string="nombre" context="{'gropup_by':'nombre'}" />
+          </group>
+        </search>
+      </field>
+    </record>
+
+    
+    <!-- form -->
+    
+    <record model="ir.ui.view" id="odoo502.piezas_form_view">
+      <field name="name">odoo502.piezas.view.form</field>
+      <field name="model">odoo502.piezas</field>
+      <field name="arch" type="xml">
+        <form string="Información de las piezas">
+          <sheet>
+            <div class="oe_title">
+              <h1>
+                ID <field name="name" placeholder="id"/>
+              </h1>
+            </div>
+            <group>
+              <group>
+                <separator string="Datos"/>
+                <field name="nombre" placeholder="nombre"/>
+              </group>
+            </group>
+          </sheet>
+        </form>
+      </field>
+
+    </record>
+
+
+    <!-- Definición de menús-->
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="odoo502.piezas_action_window">
+      <field name="name">Piezas</field>
+      <field name="res_model">odoo502.piezas</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="odoo502" id="odoo502.menu_root"/>
+    <menuitem name="Piezas" id="odoo502.menu_piezas" parent="odoo502.menu_root"/>
+    <menuitem name="List" id="odoo502.menu_piezas_list" parent="odoo502.menu_piezas"
+              action="odoo502.piezas_action_window"/>
+
+    <!-- Modelo 3 -->
+    <!-- Vistas de accesorios-->
+
+    <record model="ir.ui.view" id="odoo502.accesorios_list_view">
+      <field name="name">odoo502.accesorios.view.tree</field>
+      <field name="model">odoo502.accesorios</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="nombre"/>
+        </tree>
+      </field>
+    </record>
+
+<!-- search -->
+
+    <record model="ir.ui.view" id="odoo502.accesorios_search_view">
+      <field name="name">odoo502.accesorios.view.search</field>
+      <field name="model">odoo502.accesorios</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="name"/>
+          <field name="nombre"/>
+          <group>
+            <filter name="group_by_nombre" string="nombre" context="{'gropup_by':'nombre'}" />
+          </group>
+        </search>
+      </field>
+    </record>
+
+    
+    <!-- form -->
+    
+    <record model="ir.ui.view" id="odoo502.accesorios_form_view">
+      <field name="name">odoo502.accesorios.view.form</field>
+      <field name="model">odoo502.accesorios</field>
+      <field name="arch" type="xml">
+        <form string="Información accesorios">
+          <sheet>
+            <div class="oe_title">
+              <h1>
+                ID <field name="name" placeholder="id"/>
+              </h1>
+            </div>
+            <group>
+              <group>
+                <separator string="Datos"/>
+                <field name="nombre" placeholder="nombre"/>
+              </group>
+            </group>
+          </sheet>
+        </form>
+      </field>
+
+    </record>
+
+
+    <!-- Definición de menús-->
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="odoo502.accesorios_action_window">
+      <field name="name">accesorios</field>
+      <field name="res_model">odoo502.accesorios</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="odoo502" id="odoo502.menu_root"/>
+    <menuitem name="accesorios" id="odoo502.menu_accesorios" parent="odoo502.menu_root"/>
+    <menuitem name="List" id="odoo502.menu_accesorios_list" parent="odoo502.menu_accesorios"
+              action="odoo502.accesorios_action_window"/>
+  </data>
+</odoo>

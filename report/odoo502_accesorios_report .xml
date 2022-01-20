@@ -1,0 +1,29 @@
+<odoo>
+    <record id="odoo502.accesorios_report" model="ir.actions.report">
+        <field name="name"> Informe de accesorios</field>
+        <field name="model">odoo502.accesorios</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">odoo502.accesorios_report_view</field>
+        <field name="report_file">odoo502.accesorios_report</field>
+        <field name="binding_model_id" ref="model_odoo502_accesorios"/>
+        <field name="binding_type">report</field>
+
+    </record>
+
+    <template id="accesorios_report_view">
+        <t t-call="web.html_container">
+            <!-- muestra datos de la empresa (salta página) -->
+            <t t-call="web.external_layout">
+                <h1>accesorios </h1><br />
+                <t t-foreach="docs" t-as="accesorios">
+                    <ul>
+                        <li>    id <span t-field="accesorios.name" /></li>
+                        <li>    nombre <span t-field="accesorios.nombre" /></li>
+
+                    </ul>
+                </t>
+            </t>
+        </t>
+    </template>
+
+</odoo>
